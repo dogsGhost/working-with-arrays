@@ -6,6 +6,17 @@ Mutating arrays directly in different parts of your codebase may make it more di
 
 These are available array methods that directly manipulate the value of an array. We look at alternatives available that will instead return a new array, maintaining the value of the original array. Note some of these alternatives use features added in ES2015.
 
+### Table of Contents
+* [fill](#fill)
+* [pop](#pop)
+* [push](#push)
+* [reverse](#reverse)
+* [shift](#shift)
+* [sort](#sort)
+* [splice](#splice)
+* [unshift](#unshift)
+* [forEach](#foreach)
+
 ### fill
 
 Fill the elements in an array with a given value, with the option of specifying a start and end index.  
@@ -51,9 +62,7 @@ Use `slice` instead.
 
 ```javascript
 const arr1 = [1, 2, 3]
-
 const arr2 = arr1.slice(0, arr1.length - 1)
-
 const lastElementOfArr1 = arr1[arr1.length - 1]
 
 console.log(arr1) // [1, 2, 3]
@@ -72,6 +81,7 @@ Use the spread operator (`...`) instead.
 const arr1 = [1, 2, 3]
 const arr2 = [...arr1, 4, 5]
 const arr2Length = arr2.length
+
 console.log(arr1) // [1, 2, 3]
 console.log(arr2) // [1, 2, 3, 4, 5]
 console.log(arr2Length) // 5
@@ -83,6 +93,7 @@ Alternatively, you can use `concat`.
 const arr1 = [1, 2, 3]
 const arr2 = arr1.concat([4, 5])
 const arr2Length = arr2.length
+
 console.log(arr1) // [1, 2, 3]
 console.log(arr2) // [1, 2, 3, 4, 5]
 console.log(arr2Length) // 5
@@ -138,6 +149,7 @@ Create a unique copy the array using the spread operator (`...`) before performi
 ```javascript
 const arr1 = [2, 5, 1, 3, 4]
 const arr2 = [...arr1].sort((a, b) => b > a)
+
 console.log(arr1) // [2, 5, 1, 3, 4]
 console.log(arr2) // [5, 4, 3, 2, 1]
 ```
@@ -147,6 +159,7 @@ Alternatively, you can use `concat`.
 ```javascript
 const arr1 = [2, 5, 1, 3, 4]
 const arr2 = [].concat(arr1).sort((a, b) => b > a)
+
 console.log(arr1) // [2, 5, 1, 3, 4]
 console.log(arr2) // [5, 4, 3, 2, 1]
 ```
@@ -191,6 +204,7 @@ Use the spread operator (`...`) instead.
 const arr1 = [1, 2, 3]
 const arr2 = [4, 5, ...arr1]
 const arr2Length = arr2.length
+
 console.log(arr1) // [1, 2, 3]
 console.log(arr2) // [4, 5, 1, 2, 3]
 console.log(arr2Length) // 5
@@ -202,6 +216,7 @@ Alternatively, you can use `concat`.
 const arr1 = [1, 2, 3]
 const arr2 = [4, 5].concat(arr1)
 const arr2Length = arr2.length
+
 console.log(arr1) // [1, 2, 3]
 console.log(arr2) // [4, 5, 1, 2, 3]
 console.log(arr2Length) // 5
