@@ -4,7 +4,6 @@ These methods take a callback as a parameter, which is then executed once for ev
 
 ### Table of Contents
 
-* [entries](#entries)
 * [every](#every)
 * [some](#some)
 * [filter](#filter)
@@ -16,17 +15,53 @@ These methods take a callback as a parameter, which is then executed once for ev
 * [reduceRight](#reduceright)
 * [values](#values)
 
-## entries
-
-TODO
-
 ## every
 
-TODO
+Check if all elements in an array cause the passed callback to return `true`. Returns `true` or `false`.
+
+Before the `every` method existed, you might have done this the following way:
+
+```javascript
+var arr1 = [80, 95, 72, 100, 85]
+var noneUnder80 = true
+var i = 0, len = arr1.length
+
+for (i; i < len; i++) {
+  if (arr1[i] < 80) {
+    noneUnder80 = false
+    break
+  }
+}
+
+console.log(noneUnder80) // false
+```
+
+Since `every` returns a boolean, we can assign the method call directly to `noneUnder80`. If any element in the array causes the callback function to return `false`, `every` will return `false`.
+
+```javascript
+const arr1 = [80, 95, 72, 100, 85]
+const noneUnder80 = arr1.every(ele => {
+  return ele >= 80
+})
+
+console.log(noneUnder80) // false
+```
 
 ## some
 
-TODO
+Check if any of the elements in an array cause the passed callback to return `true`. As long as at least one element passes, `some` will return `true`, otherwise it will return `false`.
+
+```javascript
+const arr1 = [2, 4, 6, 8]
+let isBiggerThan10 = arr1.some(ele => ele > 10)
+
+console.log(isBiggerThan10) // false
+
+const arr2 = [2, 4, 6, 8, 12]
+isBiggerThan10 = arr2.some(ele => ele > 10)
+
+console.log(isBiggerThan10) // true
+```
 
 ## filter
 
