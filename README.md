@@ -1,4 +1,4 @@
 # Working with Arrays
 
-* [Iterator Methods](iterator-methods)
-* [Avoiding Array Mutations](mutator-methods)
+* [Iterator Methods](iterator-methods.md)
+* [Avoiding Array Mutations](mutator-methods.md)
