@@ -69,7 +69,25 @@ TODO
 
 ## find
 
-TODO
+Return the first element in an array that evaluates a given callback to `true`. If no matching element is found, return `undefined`.
+
+```javascript
+const userEntries = [
+  { name: 'maria', age: 29 },
+  { name: 'jose', age: 35 },
+  { name: 'emilio', age: 27 }
+]
+
+const getUserEntry = (username) => {
+  return userEntries.find(ele => ele.name === username)
+}
+
+const userEntry1 = getUserEntry('jose')
+const userEntry2 = getUserEntry('samantha')
+
+console.log(userEntry1); // { name: 'jose', age: 35 }
+console.log(userEntry2); // undefined
+```
 
 ## findIndex
 
