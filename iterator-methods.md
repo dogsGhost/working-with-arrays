@@ -65,7 +65,15 @@ console.log(isBiggerThan10) // true
 
 ## filter
 
-TODO
+Return an array of all elements in an array that evaluate a given callback to `true`.
+
+```javascript
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+const oddNumbers = numbers.filter((num) => num % 2 === 1)
+
+console.log(oddNumbers) // [1, 3, 5, 7, 9]
+```
 
 ## find
 
@@ -111,10 +119,6 @@ console.log(userEntry1); // 1
 console.log(userEntry2); // -1
 ```
 
-## keys
-
-TODO
-
 ## map
 
 TODO
@@ -124,9 +128,5 @@ TODO
 TODO
 
 ## reduceRight
-
-TODO
-
-## values
 
 TODO
