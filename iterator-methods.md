@@ -93,8 +93,8 @@ const getUserEntry = (username) => {
 const userEntry1 = getUserEntry('jose')
 const userEntry2 = getUserEntry('samantha')
 
-console.log(userEntry1); // { name: 'jose', age: 35 }
-console.log(userEntry2); // undefined
+console.log(userEntry1) // { name: 'jose', age: 35 }
+console.log(userEntry2) // undefined
 ```
 
 ## findIndex
@@ -115,8 +115,8 @@ const getUserEntry = (username) => {
 const userEntry1 = getUserEntry('jose')
 const userEntry2 = getUserEntry('samantha')
 
-console.log(userEntry1); // 1
-console.log(userEntry2); // -1
+console.log(userEntry1) // 1
+console.log(userEntry2) // -1
 ```
 
 ## map
