@@ -121,7 +121,17 @@ console.log(userEntry2) // -1
 
 ## map
 
-TODO
+Return a new array containing the results of calling a given callback on each element in an array.
+
+```javascript
+const values = [1, 2, 3, 4]
+
+const valuesDoubled = values.map((ele) => {
+  return ele * 2
+})
+
+console.log(valuesDoubled) // [2, 4, 6, 8]
+```
 
 ## reduce
 
