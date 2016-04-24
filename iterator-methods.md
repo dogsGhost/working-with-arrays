@@ -135,8 +135,33 @@ console.log(valuesDoubled) // [2, 4, 6, 8]
 
 ## reduce
 
-TODO
+Return a single value by calling a given callback for each element in an array and passing on the value returned by the callback to the next iteration. An optional initial value can be passed to be used as the first value the first the callback runs.
+
+
+If no initial value is passed the first two values from the array are used, so in the example below the first time the callback runs, `a = 1`, `b = 2`, and the callback returns `3`. The second time the callback runs, `a = 3`, the value returned by the previous iteration, and `b = 3`, the current element in the array.
+
+```javascript
+const values = [1, 2, 3, 4]
+
+const sumofValues = values.reduce((a, b) => {
+  return a + b
+})
+
+console.log(sumofValues) // 10
+```
+
+Here we pass an initial value of `5`, so the first time the callback runs, `a = 5`, `b = 1`, and the callback returns `6`. The second time the callback runs, `a = 6`, the value returned by the previous iteration, and `b = 2`.
+
+```javascript
+const values = [1, 2, 3, 4]
+
+const sumofValues = values.reduce((a, b) => {
+  return a + b
+}, 5)
+
+console.log(sumofValues) // 15
+```
 
 ## reduceRight
 
-TODO
+`reduceRight` works the same way as `reduce`, but loops backward through the given array starting at the last element in the array.
