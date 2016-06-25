@@ -9,7 +9,6 @@ These methods take a callback as a parameter, which is then executed once for ev
 * [filter](#filter)
 * [find](#find)
 * [findIndex](#findindex)
-* [keys](#keys)
 * [map](#map)
 * [reduce](#reduce)
 * [reduceRight](#reduceright)
